@@ -14,6 +14,12 @@
 <button>💬 Ask AI</button>
 <button>🖼️ Create Image</button>
 <button>🎬 Create Video</button>
-<script src="script.js"></script>
+<script src="script.js"></script><script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js")
+    .then(() => console.log("FANTASTIC AI is ready"))
+    .catch(error => console.log(error));
+}
+</script>
 </body>
 </html>
