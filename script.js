@@ -1,3 +1,4 @@
+
 function sendMessage() {
   const input = document.getElementById("message");
   const chat = document.getElementById("chat");
@@ -15,8 +16,9 @@ function sendMessage() {
 
   const aiMessage = document.createElement("p");
   aiMessage.textContent =
-    "FANTASTIC AI: Thank you! Real AI connection is coming soon.";
+    "FANTASTIC AI: Murakoze kubaza! Ndacyategurwa kugira ngo mbe AI nyayo. Real AI connection is coming soon.";
   chat.appendChild(aiMessage);
 
   input.value = "";
+  chat.scrollTop = chat.scrollHeight;
 }
