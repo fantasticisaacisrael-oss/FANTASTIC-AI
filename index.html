@@ -1,28 +1,68 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FANTASTIC AI</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FANTASTIC AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
 </head>
+
 <body>
-<img src="https://fantasticisaacisrael-oss.github.io/FANTASTIC-AI/Screenshot%202026-11-17%20105035.png"
-     alt="FANTASTIC AI Logo"
-     width="150">
-<h1>FANTASTIC AI</h1>
-<h2>Your Smart AI Assistant</h2>
-<p>Welcome to FANTASTIC AI!</p>
-<button>💬 Ask AI</button>
-<button>🖼️ Create Image</button>
-<button>🎬 Create Video</button>
-<script src="script.js"></script><script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./service-worker.js")
-    .then(() => console.log("FANTASTIC AI is ready"))
-    .catch(error => console.log(error));
-}
-</script>
+
+  <header>
+    <img
+      src="https://fantasticisaacisrael-oss.github.io/FANTASTIC-AI/Screenshot%202026-11-17%20105035.png"
+      alt="FANTASTIC AI Logo"
+      width="150"
+    >
+
+    <h1>FANTASTIC AI</h1>
+    <h2>Your Smart AI Assistant</h2>
+    <p>Welcome to FANTASTIC AI!</p>
+  </header>
+
+  <main>
+
+    <section class="chat-box">
+      <h2>💬 AI CHAT</h2>
+
+      <div id="chat"></div>
+
+      <input
+        id="message"
+        type="text"
+        placeholder="Ask me anything..."
+      >
+
+      <button onclick="sendMessage()">Send</button>
+    </section>
+
+    <section>
+      <h2>🚀 AI TOOLS</h2>
+
+      <button disabled>🖼️ Create Image - Coming Soon</button>
+      <button disabled>🎬 Create Video - Coming Soon</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 FANTASTIC AI. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js")
+        .then(() => console.log("FANTASTIC AI is ready"))
+        .catch(error => console.log("Service Worker error:", error));
+    }
+  </script>
+
 </body>
 </html>
